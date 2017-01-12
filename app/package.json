@@ -1,31 +1,44 @@
 {
-  "name": "angular-d3-node-mongo-live-website",
+  "name": "libnav",
   "version": "1.0.0",
-  "description": "package demoing how to create a site with real-time graphs that doubles as mobile chart backend",
-  "main": "index.js",
+  "description": "Oregon State Universiry Valley Library navigation system ",
+  "main": "service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gskielian/angular-d3-node-mongo-live-website.git"
+    "url": "git+https://github.com/VallyLibrarySeniorCapstone/Libnav.git"
   },
   "keywords": [
     "angular",
     "d3",
-    "node",
-    "mongo"
+    "node"
   ],
-  "author": "Gregory Sean Kielian",
+  "contributors": [
+    {
+      "name": "Nathan Healea",
+      "email": "healean@oregonstate.edu"
+    },
+    {
+      "name": "Stephen Krueger",
+      "email": "krugest@oregonstate.edu"
+    },
+    {
+      "name": "Matthew Zakrvsky",
+      "email": "zakrevsm@oregonstate.edu"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gskielian/angular-d3-node-mongo-live-website/issues"
+    "url": "https://github.com/VallyLibrarySeniorCapstone/Libnav/issues"
   },
-  "homepage": "https://github.com/gskielian/angular-d3-node-mongo-live-website#readme",
+  "homepage": "https://github.com/VallyLibrarySeniorCapstone/Libnav",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "bootstrap": "^3.3.7",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
-    "mongodb": "1.3.23"
+    "jquery": "^3.1.1"
   }
 }

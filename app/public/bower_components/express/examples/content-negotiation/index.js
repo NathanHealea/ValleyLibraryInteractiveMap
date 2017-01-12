@@ -3,7 +3,7 @@ var app = module.exports = express();
 var users = require('./db');
 
 // so either you can deal with different types of formatting
-// for expected response in index.js
+// for expected response in server.js
 app.get('/', function(req, res){
   res.format({
     html: function(){
