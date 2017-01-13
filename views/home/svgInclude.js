@@ -21,3 +21,5 @@ d3.xml("floor6N.svg", "image/svg+xml", function(xml) {
   d3.select(".item")[0][0].appendChild(importedNode.cloneNode(true));
 
 });
+
+//example https://bl.ocks.org/jhellier/fb4772b5ca6f2a5ee51a
