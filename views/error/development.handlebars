@@ -10,16 +10,19 @@
 
     <div class="container">
         <h1>{{title}}</h1>
-        <p>Welcome to {{title}}</p>
-        {{body}}
+        <h2>{{error.status}}</h2>
+
+
+        {{{body}}}
+
+        <pre>{{error.stack}}</pre>
+
     </div>
 
     {{> home/footer }}
     {{> home/javascript }}
 
     <!-- Add d3 scrip here !-->
-
-    <!-- Navigation Script tag !-->
     <script>
         /*(function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

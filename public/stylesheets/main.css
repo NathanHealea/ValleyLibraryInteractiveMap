@@ -44,7 +44,7 @@ body {
 
 .navbar-nav > li > a {
 
-    color: #c34500;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -88,13 +88,9 @@ body {
     padding: 0px;
 }
 
-/*.navbar-fixed-top .nav {*/
-/*padding: 15px 0;*/
-/*}*/
-
-/*.navbar-fixed-top .navbar-brand {*/
-/*padding: 0 15px;*/
-/*}*/
+.navbar-right{
+    margin: 0px;
+}
 
 @media (min-width: 768px) {
     .navbar-fixed-top .navbar-brand {
@@ -102,6 +98,8 @@ body {
     }
 }
 
+
+/* --- Tag styleing -- */
 a {
     color: #c34500;
     text-decoration: none;
@@ -126,24 +124,17 @@ h2, h3, h4 {
     line-height: 1.2;
 }
 
-section {
-    background-color: lightgray;
-}
+/*section {*/
+    /*background-color: lightgray;*/
+/*}*/
 
-.cover img {
-    width: 100%;
-    height: auto;
-}
-
-.content {
-    background: #fff;
-    padding: 50px 10px;
-}
+/* --- Footer styling --- */
 
 footer {
     background: url('/public/images/osu/footer-trees.png?v=1') repeat-x bottom left #373737;
     color: #fff;
     padding: 50px;
+    margin-top: 10px;
     border-top: 5px solid #c34500;
     min-height: 200px;
 }
@@ -167,6 +158,57 @@ footer div.social-media {
     padding-top: 15px;
 }
 
+footer p {
+    padding: 0px;
+    margin: 5px 0px;
+}
 
+/* --- Font Awesome styleing --- */
+.fa-container{
+    display: inline-block;
+}
+
+.fa-vertical{
+    vertical-align: middle;
+}
+
+
+/* --- Login styleing ---- */
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: 10px auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+/**[role="form"] {*/
+    /*max-width: 530px;*/
+    /*padding: 15px;*/
+    /*margin: 0 auto;*/
+    /*background-color: #fff;*/
+    /*border-radius: 0.3em;*/
+/*}*/
 
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ab">
+<head>
+    {{> home/head }}
+
+
+</head>
+<body>
+    {{> home/nav}}
+
+    <div class="container">
+
+        <!-- Title and basic info !-->
+        <section class="row">
+            <div class="col-lg-12">
+                <h1>Setup Script</h1>
+                <p>Please fill out the fallowing form
+                    to setup your web application.</p>
+            </div>
+        </section> <!-- /.row !-->
+
+        <!-- Setup from !-->
+        <section class="row">
+            <div class="col-lg-12">
+                <form href="/setup" method="POST" role="form" class="form-horizontal">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3>Application Master Configuration </h3>
+
+                            <!-- application master username !-->
+                            <div class="form-group " id="masterUsernameGroup">
+                                <label for="masterUsername" class="col-sm-3 control-label">Username</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="masterUsername" name="masterUsername"
+                                           placeholder="application master username" class="form-control" autofocus>
+                                    <span id="masterUsernameError" class="help-block"></span>
+                                </div>
+                            </div>
+
+                            <!-- application master password !-->
+                            <div class="form-group" id="masterPasswordGroup">
+                                <label for="masterPassword" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="masterPassword" name="masterPassword"
+                                           placeholder="application master password" class="form-control" autofocus>
+                                    <span id="masterPasswordError" class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.row !-->
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3>Database Configuration</h3>
+
+                            <!-- database host url !-->
+                            <div class="form-group" id="dbHostGroup">
+                                <label for="dbHost" class="col-sm-3 control-label">Host Url</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="dbHost" name="dbHost"
+                                           placeholder="mysql.host.oreognstate.edu" class="form-control" autofocus>
+                                    <span class="help-block">Database host address</span>
+                                    <span id="dbHostError" class="help-block"></span>
+                                </div>
+                            </div>
+
+                            <!-- database name !-->
+                            <div class="form-group" id="dbNameGroup">
+                                <label for="dbName" class="col-sm-3 control-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="dbName" name="dbName"
+                                           placeholder="mydatabase" class="form-control" autofocus>
+                                    <span class="help-block">Name of connecting database</span>
+                                    <span id="dbNameError" class="help-block"></span>
+                                </div>
+                            </div>
+
+                            <!-- database username !-->
+                            <div class="form-group" id="dbUsernameGroup">
+                                <label for="dbUsername" class="col-sm-3 control-label">Username</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="loginUsername" name="dbUsername"
+                                           placeholder="database username" class="form-control" autofocus>
+                                    <span class="help-block">Application username used to connect to database</span>
+                                    <span id="dbUsernameError" class="help-block"></span>
+                                </div>
+                            </div>
+
+                            <!-- database password !-->
+                            <div class="form-group" id="dbPasswordGroup">
+                                <label for="dbPassword" class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="dbPassword" name="dbPassword"
+                                           placeholder="dashboard login password" class="form-control" autofocus>
+                                    <span class="help-block">Application username password used to connect to database</span>
+                                    <span id="dbPasswordError" class="help-block"></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.row !-->
+
+                    <!-- form buttons !-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <button type="submit" class="btn btn-success">Success</button>
+                            <button type="reset" class="btn btn-warning">Clear</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successMessage" tabindex="-1" role="dialog" aria-labelledby="successMessage">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="myModalLabel">Config Successfully Saved</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please changed the follow file <span >./routes/setup.js</span> to 640 permission</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{> home/footer }}
+    {{> home/javascript }}
+    <script src="/approvejs/approve.min.js"></script>
+    <script src="/public/javascripts/setup.js"></script>
+</body>

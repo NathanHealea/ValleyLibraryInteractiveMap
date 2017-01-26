@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ab">
+<head>
+    {{> home/head }}
+
+</head>
+<body>
+    {{> home/nav}}
+
+    <div class="container">
+
+
+        <!-- Login form !-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-signin">
+
+                    <!-- Error Message !-->
+                    <p class="alert alert-warning" id="error-message" hidden="true"><i class="fa fa-exclamation-triangle "></i>
+                        Username
+                        or Password was incorrect.</p>
+                    <form method="post" action="/user/login" name="login-form">
+                        <h2 class="form-signin-heading">Login</h2>
+                        <!-- Username input !-->
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Email address</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                                   required autofocus>
+                        </div>
+
+                        <!-- Password input !-->
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" id="password" name="password" class="form-control"
+                                   placeholder="Password"
+                                   required>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form>
+                </div> <!-- /.form-signin !-->
+            </div>  <!-- /.col-lg-12 !-->
+        </div> <!-- /.row !-->
+    </div> <!-- /.container !-->
+
+    {{> home/footer }}
+    {{> home/javascript }}
+
+    <script src="/public/javascripts/login.js"></script>
+</body>
