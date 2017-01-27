@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ab">
+<head>
+    {{> dashboard/head }}
+
+    <!-- Map dispaly CSS !-->
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/map-display.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        {{> dashboard/nav }}
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+                <!-- Page title !-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Room Location Form</h1>
+                        <p>Rooms are fixed structures in the Library such as study rooms, classrooms, offices,
+                            etc. </p>
+                    </div> <!-- /.col-lg-12 -->
+                </div> <!-- /.row -->
+
+                <!-- Form !-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="row">
+
+                                <!-- Location name input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="name-group">
+                                        <label for="name">Room Name</label>
+                                        <input type="text" id="name" name="name" class="form-control"
+                                               placeholder="location name"
+                                               required autofocus>
+                                        <p class="help-block">Enter the name of the location being created.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+
+                                <!-- Floor input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="name-group">
+                                        <label for="floor">Floor</label>
+                                        <select id="floor" name="floor" class="form-control"
+                                                placeholder="floor"
+                                                required autofocus>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                        <p class="help-block">Enter the floor where location is located.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+                            </div> <!-- / .row !-->
+
+                            <div class="row">
+
+                                <!-- Room number input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="number-group">
+                                        <label for="number">Room #</label>
+                                        <input type="number" id="number" name="number" class="form-control"
+                                               placeholder="ex. 201"
+                                               required autofocus>
+                                        </input>
+                                        <p class="help-block">Enter the room number.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+
+                                <!-- Room capacity input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="capacity-group">
+                                        <label for="capacity">Room Capacity</label>
+                                        <input type="number" id="capacity" name="capacity" class="form-control"
+                                               placeholder="ex. 32"
+                                               required autofocus>
+                                        </input>
+                                        <p class="help-block">Enter the room capacity.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+                            </div>
+
+                            <div class="row">
+
+                                <!-- Attributes Input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="name-group">
+                                        <label for="attribute">Attribute</label>
+                                        <textarea rows="5" id="attribute" name="attribute" class="form-control"
+                                                  placeholder="Lighting, Natural, Electrical, Socket, etc."
+                                                  required autofocus></textarea>
+                                        <p class="help-block">Enter the attributes the location contains.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+
+                                <!-- Tag Input !-->
+                                <div class="col-lg-6">
+                                    <div class="form-group" id="name-group">
+                                        <label for="tag">Tag</label>
+                                        <textarea rows="5" id="tag" name="tag" class="form-control"
+                                                  placeholder="Learning Corner, Circulation Desk, etc." required
+                                                  autofocus></textarea>
+                                        <p class="help-block">Enter the tag used to identify the location.</p>
+                                    </div>
+                                </div> <!-- / .col-lg-6 !-->
+                            </div> <!-- / .row !-->
+
+                            <!-- Map !-->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group" id="map-group">
+                                        <label for="map-wrapper">Mark Location</label>
+                                        <div id="map-wrapper"class="form-control">
+
+                                        </div> <!-- / #map-wrapper !-->
+                                    </div> <!-- / .form-group !-->
+                                </div> <!-- / .col-lg-12 !-->
+                            </div><!-- / .row !-->
+
+                            <!-- Form Commands !--->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-success" id="btn-save">Save</button>
+                                    <button type="reset" class="btn btn-warning" id="btn-clear">Clear</button>
+                                    <button class="btn btn-danger" id="btn-clear">Cancel</button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div> <!-- col-lg-6 !-->
+                </div> <!-- /.row !-->
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    {{> dashboard/javascript }}
+
+</body>
